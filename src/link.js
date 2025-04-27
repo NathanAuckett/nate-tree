@@ -68,19 +68,19 @@ AddLink(
 //Games
 AddLink(
     "Eldritchvania",
-    "./src/graphics/eldritchvania.jpg",
+    "./src/graphics/eldritchvania.webp",
     "https://store.steampowered.com/app/2423710/Eldritchvania/",
     LINK_TYPE.GAME
 );
 AddLink(
     "The Cardinal Crusade",
-    "./src/graphics/the-cardinal-crusade.jpg",
+    "./src/graphics/the-cardinal-crusade.webp",
     "https://gamejolt.com/games/thecardinalcrusade/171762",
     LINK_TYPE.GAME
 );
 AddLink(
     "Speck &nbsp; - &nbsp; info to come...",
-    "./src/graphics/speck.jpg",
+    "./src/graphics/speck.webp",
     "",
     LINK_TYPE.GAME,
     false
