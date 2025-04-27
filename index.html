@@ -3,17 +3,36 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link href="./src/output.css" rel="stylesheet">
         <title>Nate-Tree</title>
     </head>
     
-    <body>
-        <div class="flex flex-col">
-            <div class="flex flex-row justify-center m-4">
-                <h1 class="dark">Nate-Tree</h1>
+    <!-- This template is used to create and insert links into the page -->
+    <template id = "linkTemplate">
+        <a id="link" href="https://github.com/NathanAuckett" target="_blank" class="w-90/100 max-w-100 transition hover:scale-105 m-2">
+            <div class="flex flex-row text-center border-2 rounded-lg justify-between bg-emerald-100 hover:bg-sky-200">
+                <div class="m-2">
+                    <img id="image" src="./src/graphics/github-mark.svg" class="size-15 object-contain">
+                </div>
+                <div class="flex grow justify-center items-center">
+                    <p id="title" class="font-mono">Github</p>
+                </div>
             </div>
-            <div>
-                <a href="https://github.com/NathanAuckett" target="_blank">Link to something.</a>
+        </a>
+    </template>
+
+    <body>
+        <div class="flex flex-row justify-center bg-amber-100 h-dvh">
+            <div class="flex flex-col items-center w-full">
+                <div class="flex flex-col items-center mb-10">
+                    <div>
+                        <img src="./src/graphics/display-picture.jpg" class="size-50 m-4 mask-radial-at-center mask-radial-from-60% mask-radial-to-70%">
+                    </div>
+                    <h1 class="text-2xl font-mono">Nate-Tree</h1>
+                </div>
+                <!-- Link list is inserted here -->
+                <script src="./src/link.js"></script>
+                <!-- End link list -->
             </div>
         </div>
     </body>
