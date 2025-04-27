@@ -9,18 +9,24 @@ const LINK_TYPE = {
 
 function AddLink(title = "Link", image = "", url = "", type = LINK_TYPE.SOCIAL){
     console.log(`Adding ${title}`);
-    const linkTemplate = document.getElementById("linkTemplate");
-    const newLink = linkTemplate.content.cloneNode(true);
-
-    newLink.getElementById("link").href = url;
-    newLink.getElementById("title").innerHTML = title;
-    newLink.getElementById("image").src = image;
+    let linkTemplate;
+    let newLink;
 
     switch (type){
         case LINK_TYPE.SOCIAL:
+            linkTemplate = document.getElementById("linkTemplate");
+            newLink = linkTemplate.content.cloneNode(true);
+            newLink.getElementById("link").href = url;
+            newLink.getElementById("title").innerHTML = title;
+            newLink.getElementById("image").src = image;
             linkListSocials.appendChild(newLink);
             break;
         case LINK_TYPE.GAME:
+            linkTemplate = document.getElementById("linkTemplateGame");
+            newLink = linkTemplate.content.cloneNode(true);
+            newLink.getElementById("link").href = url;
+            newLink.getElementById("title").innerHTML = title;
+            newLink.getElementById("container").style.backgroundImage = `url('${image}')`;
             linkListGames.appendChild(newLink);
             break;
     }
@@ -47,6 +53,12 @@ AddLink(
 );
 
 //Games
+AddLink(
+    "The Cardinal Crusade",
+    "./src/graphics/the-cardinal-crusade.jpg",
+    "https://gamejolt.com/games/thecardinalcrusade/171762",
+    LINK_TYPE.GAME
+);
 AddLink(
     "Eldritchvania",
     "./src/graphics/eldritchvania.jpg",

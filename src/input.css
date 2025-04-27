@@ -4,3 +4,22 @@
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities);
 /* @custom-variant dark (&:where(.dark, .dark *)); */
+
+@theme {
+    --color-background-light: #E9EFEC;
+    --color-link-light: #C4DAD2;
+    --color-link-hover-light: #6A9C89;
+    --color-border-light: #16423C;
+    --color-text-light: black;
+    
+    --color-background-dark: #06202B;
+    --color-link-dark: #077A7D;
+    --color-link-hover-dark: #7AE2CF;
+    --color-border-dark: #F5EEDD;
+    --color-text-dark: white;
+}
+
+.icon-fill{
+    fill: white;
+    color: white;
+}
