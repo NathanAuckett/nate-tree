@@ -67,7 +67,7 @@ AddLink(
 
 //Games
 AddLink(
-    "Speck &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; info to come...",
+    "Speck &nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp;&nbsp; info to come...",
     "./src/graphics/speck.jpg",
     "",
     LINK_TYPE.GAME,
