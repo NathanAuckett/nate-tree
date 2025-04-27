@@ -4,19 +4,21 @@ const linkListGames = document.getElementById("linkList_games");
 
 const LINK_TYPE = {
     SOCIAL: "SOCIAL",
-    GAME: "GAME",
+    GAME: "GAME"
 }
 
-function AddLink(title = "Link", image = "", url = "", type = LINK_TYPE.SOCIAL){
+function AddLink(title = "Link", image = "", url = "", type = LINK_TYPE.SOCIAL, enabled = true){
     console.log(`Adding ${title}`);
     let linkTemplate;
     let newLink;
+    let hrefElement;
 
     switch (type){
         case LINK_TYPE.SOCIAL:
             linkTemplate = document.getElementById("linkTemplate");
             newLink = linkTemplate.content.cloneNode(true);
-            newLink.getElementById("link").href = url;
+            hrefElement = newLink.getElementById("link");
+            hrefElement.href = url;
             newLink.getElementById("title").innerHTML = title;
             newLink.getElementById("image").src = image;
             linkListSocials.appendChild(newLink);
@@ -24,11 +26,16 @@ function AddLink(title = "Link", image = "", url = "", type = LINK_TYPE.SOCIAL){
         case LINK_TYPE.GAME:
             linkTemplate = document.getElementById("linkTemplateGame");
             newLink = linkTemplate.content.cloneNode(true);
-            newLink.getElementById("link").href = url;
+            hrefElement = newLink.getElementById("link");
+            hrefElement.href = url;
             newLink.getElementById("title").innerHTML = title;
             newLink.getElementById("container").style.backgroundImage = `url('${image}')`;
             linkListGames.appendChild(newLink);
             break;
+    }
+
+    if (!enabled){
+        hrefElement.classList.add("disabled");
     }
 }
 
@@ -59,6 +66,13 @@ AddLink(
 );
 
 //Games
+AddLink(
+    "Speck &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; info to come...",
+    "./src/graphics/speck.jpg",
+    "",
+    LINK_TYPE.GAME,
+    false
+);
 AddLink(
     "Eldritchvania",
     "./src/graphics/eldritchvania.jpg",

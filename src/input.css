@@ -5,6 +5,15 @@
 @import "tailwindcss/utilities.css" layer(utilities);
 /* @custom-variant dark (&:where(.dark, .dark *)); */
 
+@font-face {
+    font-family: SourGummy;
+    src: url("./fonts/SourGummy.ttf");
+}
+@font-face {
+    font-family: AveriaLibre;
+    src: url("./fonts/AveriaLibre-Regular.ttf");
+}
+
 @theme {
     --color-background-light: #E9EFEC;
     --color-link-light: #C4DAD2;
@@ -17,9 +26,12 @@
     --color-link-hover-dark: #7AE2CF;
     --color-border-dark: #F5EEDD;
     --color-text-dark: white;
+
+    --font-sour-gummy: "SourGummy";
+    --font-AveriaLibre: "AveriaLibre";
 }
 
-.icon-fill{
-    fill: white;
-    color: white;
+a.disabled {
+    pointer-events: none;
+    cursor: default;
 }
