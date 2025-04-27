@@ -20,12 +20,15 @@
     --color-link-hover-light: #6A9C89;
     --color-border-light: #16423C;
     --color-text-light: black;
+    --color-text-light-games: white;
     
     --color-background-dark: #06202B;
-    --color-link-dark: #077A7D;
-    --color-link-hover-dark: #7AE2CF;
+    --color-link-dark: #7AE2CF;
+    --color-link-hover-dark: #077A7D;
     --color-border-dark: #F5EEDD;
-    --color-text-dark: white;
+    --color-text-dark-general: white;
+    --color-text-dark-socials: black;
+    --color-text-dark-games: white;
 
     --font-sour-gummy: "SourGummy";
     --font-AveriaLibre: "AveriaLibre";
