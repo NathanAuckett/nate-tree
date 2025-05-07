@@ -48,7 +48,7 @@ AddLink(
 );
 AddLink(
     "Github",
-    "./src/graphics/github-mark.svg",
+    "./src/graphics/github-mark-dark-with-white.svg",
     "https://github.com/NathanAuckett",
     LINK_TYPE.SOCIAL
 );
