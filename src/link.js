@@ -67,6 +67,12 @@ AddLink(
 
 //Games
 AddLink(
+    "Speck",
+    "./src/graphics/speck.webp",
+    "https://deathcountgames.itch.io/speck",
+    LINK_TYPE.GAME
+);
+AddLink(
     "Eldritchvania",
     "./src/graphics/eldritchvania.webp",
     "https://store.steampowered.com/app/2423710/Eldritchvania/",
@@ -77,11 +83,4 @@ AddLink(
     "./src/graphics/the-cardinal-crusade.webp",
     "https://gamejolt.com/games/thecardinalcrusade/171762",
     LINK_TYPE.GAME
-);
-AddLink(
-    "Speck &nbsp; - &nbsp; info to come...",
-    "./src/graphics/speck.webp",
-    "",
-    LINK_TYPE.GAME,
-    false
 );
