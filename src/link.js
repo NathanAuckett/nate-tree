@@ -28,6 +28,7 @@ function AddLink(title = "Link", image = "", url = "", type = LINK_TYPE.SOCIAL, 
             newLink = linkTemplate.content.cloneNode(true);
             hrefElement = newLink.getElementById("link");
             hrefElement.href = url;
+            if (url === "") hrefElement.target = "_self";
             newLink.getElementById("title").innerHTML = title;
             newLink.getElementById("container").style.backgroundImage = `url('${image}')`;
             linkListGames.appendChild(newLink);
@@ -67,15 +68,15 @@ AddLink(
 
 //Games
 AddLink(
-    "Speck",
-    "./src/graphics/speck.webp",
-    "https://deathcountgames.itch.io/speck",
-    LINK_TYPE.GAME
-);
-AddLink(
     "Eldritchvania",
     "./src/graphics/eldritchvania.webp",
     "https://store.steampowered.com/app/2423710/Eldritchvania/",
+    LINK_TYPE.GAME
+);
+AddLink(
+    "TBA",
+    "./src/graphics/speck.webp",
+    undefined,
     LINK_TYPE.GAME
 );
 AddLink(
